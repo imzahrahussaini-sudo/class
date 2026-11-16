@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand"> <span id="brandName">Class Name</span></div>
+    <nav>
+      <a href="#overview" class="active">📊 <b>Overview</b></a>
+      <a href="#teacher">👩‍🏫 <b>Teacher</b></a>
+      <a href="#students">🎓 <b>Students</b></a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar fade">
+      <div>
+        <h1>Welcome to <em id="className">Class Name</em></h1>
+        <p>Our class dashboard · <span id="classYear">2026–2027</span></p>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="stats">
+      <div class="stat fade"><div class="icon i1">🎓</div><div><span>Total Students</span><strong id="totalStudents">0</strong></div></div>
+      <div class="stat fade"><div class="icon i2">👩‍🏫</div><div><span>Class Teacher</span><strong id="teacherShort">Teacher</strong></div></div>
+      <div class="stat fade"><div class="icon i3">🏫</div><div><span>Section</span><strong id="classSection">A</strong></div></div>
+      <div class="stat fade"><div class="icon i4">📅</div><div><span>Academic Year</span><strong id="classYear2">2026–2027</strong></div></div>
+    </section>
+
+    <!-- TEACHER -->
+    <section id="teacher" class="panel fade">
+      <h2>Class Teacher</h2>
+      <div class="teacher">
+        <div class="t-avatar" id="teacherInitial">T</div>
+        <div>
+          <h3 id="teacherName">Teacher Name</h3>
+          <p class="role" id="teacherSubject">Subject Name</p>
+          <p id="teacherMsg">Our instructors bring practical knowledge and real-world experience in freelancing and artificial intelligence. They guide students through essential skills, industry tools, and practical projects to help them build confidence and prepare for future opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDENTS -->
+    <section id="students" class="panel fade">
+      <div class="panel-head">
+        <h2>Students <small id="countBadge">0</small></h2>
+        <input type="text" id="search" placeholder="🔍 Search student..." />
+      </div>
+      <div class="grid" id="studentGrid"></div>
+      <p class="empty" id="empty">No student found.</p>
+    </section>
+
+    <footer>© 2026 <span id="footName">Class Name</span> · Made with ♥</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
